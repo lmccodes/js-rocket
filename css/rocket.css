@@ -1,0 +1,71 @@
+body {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+}
+.left{
+  background-color: #CCCCCC;
+  position: fixed;
+  width: 33%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.right{
+  background-color: AliceBlue;
+  position: fixed;
+  width: 67%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.ground {
+  background-color: SeaGreen;
+  position: absolute;
+  bottom: 0;
+  left; 0;
+  width: 100%;
+  height: 50px;
+}
+.rocket {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100px;
+  transition: 8500ms;
+}
+.rocket-image {
+  width: 100%;
+}
+body.body-state3 .rocket{
+  bottom: 1000px;
+}
+.state1,
+.state2,
+.state3,
+.state4,
+.state5
+ {display: none;
+}
+body.body-state1 .state1{
+  display: block;
+}
+body.body-state2 .state2{
+  display: block;
+}
+body.body-state3 .state3{
+  display: block;
+}
+body.body-state4 .state4{
+  display: block;
+}
+body.body-state5 .state5{
+  display: block;
+}
+a{
+
+}
+
+a.button{
+
+}
