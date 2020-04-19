@@ -2,39 +2,38 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Rocket Launch Sequence!</title>
+  <title>Rocket Launch Sequence</title>
   <link rel="stylesheet" type="text/css" href="css/rocket.css">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/rocket.js"></script>
 </head>
 <body class="body-state1">
 <div class="left">
-<div class="state1">
-  <h1>JS Rocket Launch</h1>
-  <a href="#" class="button" onClick="changeState(2)">Launch!</a>
+<div class="interface state1">
+  <h1>Launch a Rocket</h1>
+  <a href="#" class="button green" onClick="changeState(2)">Launch</a>
 </div>
-<div class="state2">
+<div class="interface state2">
   <h1 id="countdown" >10</h1>
-  <a href="#" class="button" onClick="changeState(1)">Abort!</a>
+  <a href="#" class="button" id="abort" onClick="changeState(1)">Abort!</a>
 </div>
-<div class="state3">
+<div class="interface state3">
   <h1 id="" >Blast Off!</h1>
 </div>
-<div class="state4">
+<div class="interface state4">
   <h1>Success!</h1>
-  <a href="#" class="button" onClick="changeState(1)">Do It Again!</a>
+  <a href="#" onClick="changeState(1)">Click Here to Launch Again</a>
 </div>
-<div class="state5">
-  <h1>Oh, No!</h1>
-  <a href="#" class="button" onClick="changeState(1)">Try again!</a>
+<div class="interface state5">
+  <h1>Oh, No! Launch Failed.</h1>
+  <a href="#" onClick="changeState(1)">Click Here to Try Again</a>
 </div>
 </div>
 <div class="right">
   <div class="ground">
-
+    <img src="images/stand.png" id="stand">
   </div>
   <div class="rocket">
-    <img class="rocket-image" src="images/rocket-with-flame.png" alt="rocket-without-flame">
   </div>
 </div>
 </body>

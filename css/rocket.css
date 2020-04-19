@@ -1,45 +1,73 @@
 body {
-  font-family: 'VT323', monospace;
-  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 .left{
-  background-color: #CCCCCC;
+  background-color: #DBDBDB;
   position: fixed;
   width: 33%;
   height: 100%;
   top: 0;
   left: 0;
 }
-
+.interface {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  margin-top: 50%;
+}
 .right{
   background-color: AliceBlue;
-  position: fixed;
+  position: absolute;
   width: 67%;
   height: 100%;
   top: 0;
   right: 0;
 }
+
 .ground {
   background-color: SeaGreen;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 81px;
 }
 .rocket {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 100px;
+  width: 330px;
+  height: 330px;
+  margin-left: -165px;
+  background: url('../images/rocket-no-flame.png') no-repeat 0 0;
   transition: 8500ms;
 }
-.rocket-image {
-  width: 100%;
+#stand{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 330px;
+  height: 330px;
+  margin-left: -165px;
 }
+/* rocket bg images */
+
+body.body-state2 .rocket{
+  background: url('../images/state-2.gif');
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+  background: url('../images/state-3.gif');
+}
+body.body-state5 .rocket {
+  background: url('../images/boom.png') no-repeat;
+  bottom: 150px;
+}
+
 body.body-state1 .rocket{
   transition: none;
-}
+  }
 body.body-state3 .rocket,
 body.body-state4 .rocket{
   bottom: 1000px;
@@ -66,10 +94,28 @@ body.body-state4 .state4{
 body.body-state5 .state5{
   display: block;
 }
-a{
-
-}
 
 a.button{
-
+  display: inline-block;
+  background-color: SeaGreen;
+  color: white;
+  padding: 15px 20px 15px 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.39s;
+}
+.green:hover{
+  background-color: #465C4F;
+}
+#abort{
+  background-color: #B22222;
+  padding: 10px 15px 10px 15px;
+}
+#abort:hover{
+  background-color: #8B0000;
+}
+a.visited{
+  text-color: #465C4F;
 }
